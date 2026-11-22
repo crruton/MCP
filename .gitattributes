@@ -1,0 +1,18 @@
+# Нормализуем переводы строк: в репозитории LF, на Windows git сам развернёт в CRLF
+* text=auto eol=lf
+
+# Скрипты Windows — как есть
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Бинарные артефакты
+*.png binary
+*.jar binary
+*.dll binary
+*.exe binary
+*.pdb binary
+
+# Логи прогонов не считаем текстом для diff-статистики
+*.log -diff linguist-generated=true
+experiments/**/results*.json linguist-generated=true

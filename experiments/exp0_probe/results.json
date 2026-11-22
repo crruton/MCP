@@ -1,0 +1,336 @@
+[
+  {
+    "name": "01_discover_with_tasks_declared",
+    "ms": 172,
+    "status": 200,
+    "headers": {
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "Sun, 22 Nov 2026 13:42:15 GMT",
+      "keep-alive": "timeout=5",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "result": {
+        "supportedVersions": [
+          "2026-07-28"
+        ],
+        "capabilities": {
+          "tools": {
+            "listChanged": true
+          }
+        },
+        "resultType": "complete",
+        "ttlMs": 0,
+        "cacheScope": "private",
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "probe",
+            "version": "0.0.1"
+          }
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 1
+    },
+    "raw": "{\"result\":{\"supportedVersions\":[\"2026-07-28\"],\"capabilities\":{\"tools\":{\"listChanged\":true}},\"resultType\":\"complete\",\"ttlMs\":0,\"cacheScope\":\"private\",\"_meta\":{\"io.modelcontextprotocol/serverInfo\":{\"name\":\"probe\",\"version\":\"0.0.1\"}}},\"jsonrpc\":\"2.0\",\"id\":1}"
+  },
+  {
+    "name": "02_tools_call_ok",
+    "ms": 27,
+    "status": 200,
+    "headers": {
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "Sun, 22 Nov 2026 13:42:15 GMT",
+      "keep-alive": "timeout=5",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "hi"
+          }
+        ],
+        "resultType": "complete",
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "probe",
+            "version": "0.0.1"
+          }
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 2
+    },
+    "raw": "{\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"hi\"}],\"resultType\":\"complete\",\"_meta\":{\"io.modelcontextprotocol/serverInfo\":{\"name\":\"probe\",\"version\":\"0.0.1\"}}},\"jsonrpc\":\"2.0\",\"id\":2}"
+  },
+  {
+    "name": "03_mcp_name_mismatch",
+    "ms": 12,
+    "status": 400,
+    "headers": {
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "Sun, 22 Nov 2026 13:42:15 GMT",
+      "keep-alive": "timeout=5",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32020,
+        "message": "Bad Request: the request headers and body disagree: the body carries params.name=\"echo\" but the Mcp-Name header names \"foo\"",
+        "data": {
+          "mismatch": {
+            "header": "foo",
+            "body": "the body carries params.name=\"echo\" but the Mcp-Name header names \"foo\""
+          }
+        }
+      },
+      "id": 3
+    },
+    "raw": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32020,\"message\":\"Bad Request: the request headers and body disagree: the body carries params.name=\\\"echo\\\" but the Mcp-Name header names \\\"foo\\\"\",\"data\":{\"mismatch\":{\"header\":\"foo\",\"body\":\"the body carries params.name=\\\"echo\\\" but the Mcp-Name header names \\\"foo\\\"\"}}},\"id\":3}"
+  },
+  {
+    "name": "04_mcp_method_mismatch",
+    "ms": 13,
+    "status": 400,
+    "headers": {
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "Sun, 22 Nov 2026 13:42:15 GMT",
+      "keep-alive": "timeout=5",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32020,
+        "message": "Bad Request: the request headers and body disagree: the body names method tools/call but the Mcp-Method header names tools/list",
+        "data": {
+          "mismatch": {
+            "header": "tools/list",
+            "body": "the body names method tools/call but the Mcp-Method header names tools/list"
+          }
+        }
+      },
+      "id": 4
+    },
+    "raw": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32020,\"message\":\"Bad Request: the request headers and body disagree: the body names method tools/call but the Mcp-Method header names tools/list\",\"data\":{\"mismatch\":{\"header\":\"tools/list\",\"body\":\"the body names method tools/call but the Mcp-Method header names tools/list\"}}},\"id\":4}"
+  },
+  {
+    "name": "05_unsupported_version",
+    "ms": 22,
+    "status": 400,
+    "headers": {
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "Sun, 22 Nov 2026 13:42:15 GMT",
+      "keep-alive": "timeout=5",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32022,
+        "message": "Unsupported protocol version: 1900-01-01",
+        "data": {
+          "supported": [
+            "2026-07-28"
+          ],
+          "requested": "1900-01-01"
+        }
+      },
+      "id": 5
+    },
+    "raw": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32022,\"message\":\"Unsupported protocol version: 1900-01-01\",\"data\":{\"supported\":[\"2026-07-28\"],\"requested\":\"1900-01-01\"}},\"id\":5}"
+  },
+  {
+    "name": "06_legacy_initialize",
+    "ms": 80,
+    "status": 200,
+    "headers": {
+      "cache-control": "no-cache, no-transform",
+      "connection": "keep-alive",
+      "content-type": "text/event-stream",
+      "date": "Sun, 22 Nov 2026 13:42:15 GMT",
+      "transfer-encoding": "chunked",
+      "x-accel-buffering": "no"
+    },
+    "body": "event: message\ndata: {\"result\":{\"protocolVersion\":\"2025-11-25\",\"capabilities\":{\"tools\":{\"listChanged\":true}},\"serverInfo\":{\"name\":\"probe\",\"version\":\"0.0.1\"}},\"jsonrpc\":\"2.0\",\"id\":6}\n\n",
+    "raw": "event: message\ndata: {\"result\":{\"protocolVersion\":\"2025-11-25\",\"capabilities\":{\"tools\":{\"listChanged\":true}},\"serverInfo\":{\"name\":\"probe\",\"version\":\"0.0.1\"}},\"jsonrpc\":\"2.0\",\"id\":6}\n\n"
+  },
+  {
+    "name": "06b_legacy_tools_call",
+    "ms": 19,
+    "status": 200,
+    "headers": {
+      "cache-control": "no-cache, no-transform",
+      "connection": "keep-alive",
+      "content-type": "text/event-stream",
+      "date": "Sun, 22 Nov 2026 13:42:15 GMT",
+      "transfer-encoding": "chunked",
+      "x-accel-buffering": "no"
+    },
+    "body": "event: message\ndata: {\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"legacy\"}]},\"jsonrpc\":\"2.0\",\"id\":\"6b\"}\n\n",
+    "raw": "event: message\ndata: {\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"legacy\"}]},\"jsonrpc\":\"2.0\",\"id\":\"6b\"}\n\n"
+  },
+  {
+    "name": "07_tasks_get_no_tasks",
+    "ms": 24,
+    "status": 404,
+    "headers": {
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "Sun, 22 Nov 2026 13:42:15 GMT",
+      "keep-alive": "timeout=5",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 7,
+      "error": {
+        "code": -32601,
+        "message": "Method not found"
+      }
+    },
+    "raw": "{\"jsonrpc\":\"2.0\",\"id\":7,\"error\":{\"code\":-32601,\"message\":\"Method not found\"}}"
+  },
+  {
+    "name": "08_missing_mcp_method",
+    "ms": 11,
+    "status": 400,
+    "headers": {
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "Sun, 22 Nov 2026 13:42:15 GMT",
+      "keep-alive": "timeout=5",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32020,
+        "message": "Bad Request: the request headers and body disagree: the body names method tools/call but the required Mcp-Method header is absent",
+        "data": {
+          "mismatch": {
+            "header": "(missing)",
+            "body": "the body names method tools/call but the required Mcp-Method header is absent"
+          }
+        }
+      },
+      "id": 8
+    },
+    "raw": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32020,\"message\":\"Bad Request: the request headers and body disagree: the body names method tools/call but the required Mcp-Method header is absent\",\"data\":{\"mismatch\":{\"header\":\"(missing)\",\"body\":\"the body names method tools/call but the required Mcp-Method header is absent\"}}},\"id\":8}"
+  },
+  {
+    "name": "09_missing_mcp_name",
+    "ms": 18,
+    "status": 400,
+    "headers": {
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "Sun, 22 Nov 2026 13:42:15 GMT",
+      "keep-alive": "timeout=5",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32020,
+        "message": "Bad Request: the request headers and body disagree: the body carries params.name=\"echo\" but the required Mcp-Name header is absent",
+        "data": {
+          "mismatch": {
+            "header": "(missing)",
+            "body": "the body carries params.name=\"echo\" but the required Mcp-Name header is absent"
+          }
+        }
+      },
+      "id": 9
+    },
+    "raw": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32020,\"message\":\"Bad Request: the request headers and body disagree: the body carries params.name=\\\"echo\\\" but the required Mcp-Name header is absent\",\"data\":{\"mismatch\":{\"header\":\"(missing)\",\"body\":\"the body carries params.name=\\\"echo\\\" but the required Mcp-Name header is absent\"}}},\"id\":9}"
+  },
+  {
+    "name": "10_header_meta_version_mismatch",
+    "ms": 13,
+    "status": 400,
+    "headers": {
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "Sun, 22 Nov 2026 13:42:15 GMT",
+      "keep-alive": "timeout=5",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32020,
+        "message": "Bad Request: the request headers and body disagree: the body envelope names protocol version 2025-11-25 but the MCP-Protocol-Version header names 2026-07-28",
+        "data": {
+          "mismatch": {
+            "header": "2026-07-28",
+            "body": "the body envelope names protocol version 2025-11-25 but the MCP-Protocol-Version header names 2026-07-28"
+          }
+        }
+      },
+      "id": 10
+    },
+    "raw": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32020,\"message\":\"Bad Request: the request headers and body disagree: the body envelope names protocol version 2025-11-25 but the MCP-Protocol-Version header names 2026-07-28\",\"data\":{\"mismatch\":{\"header\":\"2026-07-28\",\"body\":\"the body envelope names protocol version 2025-11-25 but the MCP-Protocol-Version header names 2026-07-28\"}}},\"id\":10}"
+  },
+  {
+    "name": "11_unknown_method",
+    "ms": 12,
+    "status": 404,
+    "headers": {
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "Sun, 22 Nov 2026 13:42:15 GMT",
+      "keep-alive": "timeout=5",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "jsonrpc": "2.0",
+      "id": 11,
+      "error": {
+        "code": -32601,
+        "message": "Method not found"
+      }
+    },
+    "raw": "{\"jsonrpc\":\"2.0\",\"id\":11,\"error\":{\"code\":-32601,\"message\":\"Method not found\"}}"
+  },
+  {
+    "name": "12_slow_tool_1s",
+    "ms": 1024,
+    "status": 200,
+    "headers": {
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "Sun, 22 Nov 2026 13:42:16 GMT",
+      "keep-alive": "timeout=5",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "slow"
+          }
+        ],
+        "resultType": "complete",
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "probe",
+            "version": "0.0.1"
+          }
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 12
+    },
+    "raw": "{\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"slow\"}],\"resultType\":\"complete\",\"_meta\":{\"io.modelcontextprotocol/serverInfo\":{\"name\":\"probe\",\"version\":\"0.0.1\"}}},\"jsonrpc\":\"2.0\",\"id\":12}"
+  }
+]

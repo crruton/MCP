@@ -1,0 +1,35 @@
+[
+  {
+    "name": "B1-memory",
+    "mode": "memory",
+    "rows": [
+      {
+        "run": 1,
+        "status": "unknown",
+        "statusMessage": "Unknown or expired taskId",
+        "effects": 0,
+        "polls": 19,
+        "waitedMs": 10130,
+        "workerPidRecorded": false
+      },
+      {
+        "run": 2,
+        "status": "unknown",
+        "statusMessage": "Unknown or expired taskId",
+        "effects": 0,
+        "polls": 19,
+        "waitedMs": 10068,
+        "workerPidRecorded": false
+      },
+      {
+        "run": 3,
+        "status": "unknown",
+        "statusMessage": "Unknown or expired taskId",
+        "effects": 0,
+        "polls": 19,
+        "waitedMs": 10117,
+        "workerPidRecorded": false
+      }
+    ]
+  }
+]

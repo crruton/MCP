@@ -1,0 +1,44 @@
+{
+  "sdk": "io.modelcontextprotocol.sdk:mcp 2.2.0",
+  "java": "Temurin 21.0.13.1+2 (LTS)",
+  "maven": "3.10.2",
+  "transport": "stdio (client spawns expf.Server in the same JVM classpath)",
+  "negotiatedProtocolVersion": "2026-07-28",
+  "serverInfo": {
+    "name": "java-echo",
+    "version": "1.0.0"
+  },
+  "serverCapabilities": {
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "extensions": null,
+  "tools": [
+    "echo"
+  ],
+  "toolCall": {
+    "ok": true,
+    "isError": null,
+    "echo": "hello from java"
+  },
+  "tasksSupported": false,
+  "tasksEvidence": {
+    "method": "zip entry listing + byte scan of all .class files in mcp-2.2.0.jar, mcp-core-2.2.0.jar, mcp-json-jackson3-2.2.0.jar",
+    "filesScanned": 773,
+    "classFilesScanned": 720,
+    "hits": {
+      "io.modelcontextprotocol/tasks": 0,
+      "tasks/get": 0,
+      "tasks/update": 0,
+      "tasks/cancel": 0,
+      "tasks/list": 0,
+      "CreateTaskResult": 0,
+      "TaskManager": 0,
+      "TaskStore": 0
+    }
+  },
+  "note": "modern (2026-07-28) ядро работает: discover, tools/list, tools/call. Расширения Tasks в 2.2.0 нет ни в одном из трёх артефактов; release notes это подтверждают.",
+  "runLog": "run.log",
+  "runScript": "run.ps1"
+}

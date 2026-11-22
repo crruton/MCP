@@ -1,0 +1,302 @@
+{
+  "config": {
+    "turnDelayMs": 300,
+    "waitMs": 2500,
+    "repeats": 5
+  },
+  "runs": [
+    {
+      "scenario": "5 s",
+      "durationMs": 500,
+      "mode": "poll",
+      "repeats": 5,
+      "turns": {
+        "median": 4,
+        "min": 3,
+        "max": 4,
+        "all": [
+          3,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      "emptyTurns": {
+        "median": 2
+      },
+      "elapsedMs": {
+        "median": 704,
+        "min": 694,
+        "max": 3444
+      },
+      "resultBytes": {
+        "median": 801
+      }
+    },
+    {
+      "scenario": "5 s",
+      "durationMs": 500,
+      "mode": "longpoll",
+      "repeats": 5,
+      "turns": {
+        "median": 2,
+        "min": 2,
+        "max": 2,
+        "all": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "emptyTurns": {
+        "median": 0
+      },
+      "elapsedMs": {
+        "median": 624,
+        "min": 615,
+        "max": 655
+      },
+      "resultBytes": {
+        "median": 375
+      }
+    },
+    {
+      "scenario": "5 s",
+      "durationMs": 500,
+      "mode": "longpoll-burst",
+      "repeats": 5,
+      "turns": {
+        "median": 2,
+        "min": 2,
+        "max": 2,
+        "all": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "emptyTurns": {
+        "median": 0
+      },
+      "elapsedMs": {
+        "median": 611,
+        "min": 570,
+        "max": 632
+      },
+      "resultBytes": {
+        "median": 375
+      }
+    },
+    {
+      "scenario": "40 s",
+      "durationMs": 4000,
+      "mode": "poll",
+      "repeats": 5,
+      "turns": {
+        "median": 16,
+        "min": 14,
+        "max": 16,
+        "all": [
+          14,
+          16,
+          16,
+          16,
+          16
+        ]
+      },
+      "emptyTurns": {
+        "median": 14
+      },
+      "elapsedMs": {
+        "median": 4270,
+        "min": 4161,
+        "max": 4320
+      },
+      "resultBytes": {
+        "median": 3358
+      }
+    },
+    {
+      "scenario": "40 s",
+      "durationMs": 4000,
+      "mode": "longpoll",
+      "repeats": 5,
+      "turns": {
+        "median": 3,
+        "min": 3,
+        "max": 3,
+        "all": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "emptyTurns": {
+        "median": 1
+      },
+      "elapsedMs": {
+        "median": 4101,
+        "min": 4097,
+        "max": 4137
+      },
+      "resultBytes": {
+        "median": 589
+      }
+    },
+    {
+      "scenario": "40 s",
+      "durationMs": 4000,
+      "mode": "longpoll-burst",
+      "repeats": 5,
+      "turns": {
+        "median": 3,
+        "min": 3,
+        "max": 3,
+        "all": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "emptyTurns": {
+        "median": 1
+      },
+      "elapsedMs": {
+        "median": 4106,
+        "min": 4089,
+        "max": 4125
+      },
+      "resultBytes": {
+        "median": 589
+      }
+    },
+    {
+      "scenario": "180 s",
+      "durationMs": 18000,
+      "mode": "poll",
+      "repeats": 5,
+      "turns": {
+        "median": 63,
+        "min": 62,
+        "max": 63,
+        "all": [
+          63,
+          63,
+          62,
+          62,
+          63
+        ]
+      },
+      "emptyTurns": {
+        "median": 61
+      },
+      "elapsedMs": {
+        "median": 18368,
+        "min": 18081,
+        "max": 18427
+      },
+      "resultBytes": {
+        "median": 13370
+      }
+    },
+    {
+      "scenario": "180 s",
+      "durationMs": 18000,
+      "mode": "longpoll",
+      "repeats": 5,
+      "turns": {
+        "median": 8,
+        "min": 8,
+        "max": 8,
+        "all": [
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "emptyTurns": {
+        "median": 6
+      },
+      "elapsedMs": {
+        "median": 18124,
+        "min": 18104,
+        "max": 18206
+      },
+      "resultBytes": {
+        "median": 1655
+      }
+    },
+    {
+      "scenario": "180 s",
+      "durationMs": 18000,
+      "mode": "longpoll-burst",
+      "repeats": 5,
+      "turns": {
+        "median": 8,
+        "min": 8,
+        "max": 8,
+        "all": [
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "emptyTurns": {
+        "median": 6
+      },
+      "elapsedMs": {
+        "median": 18113,
+        "min": 18062,
+        "max": 18161
+      },
+      "resultBytes": {
+        "median": 1655
+      }
+    }
+  ],
+  "table": [
+    {
+      "scenario": "5 s",
+      "turnsPoll": 4,
+      "turnsLong": 2,
+      "turnsBurst": 2,
+      "speedupFair": 2,
+      "elapsedPoll": 704,
+      "elapsedLong": 624,
+      "elapsedBurst": 611
+    },
+    {
+      "scenario": "40 s",
+      "turnsPoll": 16,
+      "turnsLong": 3,
+      "turnsBurst": 3,
+      "speedupFair": 5.33,
+      "elapsedPoll": 4270,
+      "elapsedLong": 4101,
+      "elapsedBurst": 4106
+    },
+    {
+      "scenario": "180 s",
+      "turnsPoll": 63,
+      "turnsLong": 8,
+      "turnsBurst": 8,
+      "speedupFair": 7.88,
+      "elapsedPoll": 18368,
+      "elapsedLong": 18124,
+      "elapsedBurst": 18113
+    }
+  ]
+}

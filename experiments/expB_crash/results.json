@@ -1,0 +1,22 @@
+[
+  {
+    "name": "B6-recover-no-idempotency",
+    "mode": "recover",
+    "rows": [
+      {
+        "run": 1,
+        "status": "completed",
+        "statusMessage": "done",
+        "effects": 2,
+        "workerPidRecorded": true
+      },
+      {
+        "run": 2,
+        "status": "completed",
+        "statusMessage": "done",
+        "effects": 2,
+        "workerPidRecorded": true
+      }
+    ]
+  }
+]
