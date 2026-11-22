@@ -1,6 +1,7 @@
 # Как опубликовать
 
-Репозиторий инициализирован, первый коммит сделан в ветке `main`. Remote пока не настроен.
+Репозиторий инициализирован, первый коммит сделан в ветке `main`. Remote — `origin`
+(https://github.com/crruton/MCP.git), `main` защищена: изменения идут через PR.
 
 ## 1. Проверить, что попадёт в коммит
 
@@ -26,12 +27,16 @@ git commit -m "<что изменилось>"
 
 ## 3. Репозиторий на GitHub
 
-Ветка уже переименована в `main`. Осталось создать пустой репозиторий на github.com и выполнить:
+Remote уже настроен: `origin` → https://github.com/crruton/MCP.git. Ветка `main` защищена,
+поэтому работа идёт через отдельную ветку и pull request:
 
 ```powershell
-git remote add origin https://github.com/<user>/<repo>.git
-git push -u origin main
+git checkout -b article/mcp-tasks-nov-2026
+git push -u origin article/mcp-tasks-nov-2026
 ```
+
+Затем открыть https://github.com/crruton/MCP/pull/new/article/mcp-tasks-nov-2026 и создать PR
+в `main`. Прямой `git push origin main` отклоняется защитой ветки.
 
 Перед публикацией стоит решить два вопроса:
 
