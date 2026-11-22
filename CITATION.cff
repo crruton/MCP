@@ -6,7 +6,9 @@ abstract: >-
   13 HTTP-зондов ядра, 45 замеров поллинга, 6 сценариев падения процесса и живые
   прогоны клиентов и серверов на TypeScript, Go, C#, Rust и Java.
 authors:
-  - name: "MCP Tasks Lab contributors"
+  - family-names: "Nosov"
+    given-names: "Aleksandr"
+    email: "AVNosov_57@t1-team.ru"
 version: "1.0.0"
 date-released: "2026-11-22"
 license: MIT

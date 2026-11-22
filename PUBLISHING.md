@@ -1,8 +1,10 @@
 # Как опубликовать
 
-Репозиторий инициализирован (`git init`), но коммитов нет — их делаете вы.
+Репозиторий инициализирован, первый коммит сделан в ветке `main`. Remote пока не настроен.
 
 ## 1. Проверить, что попадёт в коммит
+
+Первый коммит уже сделан (`312d5e9`, ветка `main`). Для следующих изменений:
 
 ```powershell
 git add -A --dry-run
@@ -12,18 +14,21 @@ git add -A --dry-run
 Не должны: `node_modules/`, `experiments/expF_java/target/`, `experiments/expD_csharp/**/bin|obj/`,
 `experiments/logs/`, `experiments/expF_java/build.log`, `*.tmp`.
 
-## 2. Первый коммит
+## 2. Коммиты
+
+Первый коммит: `312d5e9` «MCP Tasks, ноябрь 2026: статья, эксперименты и замеры», 56 файлов.
+Для следующих коммитов:
 
 ```powershell
 git add -A
-git commit -m "MCP Tasks, ноябрь 2026: статья, эксперименты и замеры"
+git commit -m "<что изменилось>"
 ```
 
 ## 3. Репозиторий на GitHub
 
+Ветка уже переименована в `main`. Осталось создать пустой репозиторий на github.com и выполнить:
+
 ```powershell
-# создать пустой репозиторий на github.com, затем:
-git branch -M main
 git remote add origin https://github.com/<user>/<repo>.git
 git push -u origin main
 ```
@@ -32,8 +37,8 @@ git push -u origin main
 
 - **Лицензия.** В `LICENSE` стоит MIT для кода и CC BY 4.0 для текста статьи. Если нужна другая
   (например, Apache-2.0 или CC BY-SA), замените файл целиком.
-- **Авторство.** В `CITATION.cff` и `LICENSE` стоит заглушка «MCP Tasks Lab contributors».
-  Впишите себя: `given-names`, `family-names`, `orcid`, `affiliation`.
+- **Авторство.** В `CITATION.cff` и `LICENSE` уже вписан автор (Aleksandr Nosov). Если нужно —
+  добавьте `orcid` и `affiliation`.
 
 ## 4. Что проверить после публикации
 
