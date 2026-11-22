@@ -1,0 +1,123 @@
+[
+  {
+    "name": "B1-memory",
+    "mode": "memory",
+    "rows": [
+      {
+        "run": 1,
+        "status": "unknown",
+        "statusMessage": "SyntaxError: Unexpected token 'U', \"Unknown or\"... is not valid JSON",
+        "effects": 0,
+        "workerPidRecorded": false
+      },
+      {
+        "run": 2,
+        "status": "unknown",
+        "statusMessage": "SyntaxError: Unexpected token 'U', \"Unknown or\"... is not valid JSON",
+        "effects": 0,
+        "workerPidRecorded": false
+      },
+      {
+        "run": 3,
+        "status": "unknown",
+        "statusMessage": "SyntaxError: Unexpected token 'U', \"Unknown or\"... is not valid JSON",
+        "effects": 0,
+        "workerPidRecorded": false
+      }
+    ]
+  },
+  {
+    "name": "B2-file",
+    "mode": "file",
+    "rows": [
+      {
+        "run": 1,
+        "status": "working",
+        "statusMessage": "started",
+        "effects": 1,
+        "workerPidRecorded": true
+      },
+      {
+        "run": 2,
+        "status": "working",
+        "statusMessage": "started",
+        "effects": 1,
+        "workerPidRecorded": true
+      },
+      {
+        "run": 3,
+        "status": "working",
+        "statusMessage": "started",
+        "effects": 1,
+        "workerPidRecorded": true
+      }
+    ]
+  },
+  {
+    "name": "B3-file-heartbeat",
+    "mode": "file-heartbeat",
+    "rows": [
+      {
+        "run": 1,
+        "status": "failed",
+        "statusMessage": "worker lost (stale heartbeat)",
+        "effects": 1,
+        "workerPidRecorded": true
+      },
+      {
+        "run": 2,
+        "status": "failed",
+        "statusMessage": "worker lost (stale heartbeat)",
+        "effects": 1,
+        "workerPidRecorded": true
+      },
+      {
+        "run": 3,
+        "status": "failed",
+        "statusMessage": "worker lost (stale heartbeat)",
+        "effects": 1,
+        "workerPidRecorded": true
+      }
+    ]
+  },
+  {
+    "name": "B4-external-worker",
+    "mode": "external",
+    "rows": [
+      {
+        "run": 1,
+        "status": "completed",
+        "statusMessage": "done",
+        "effects": 1,
+        "workerPidRecorded": true
+      },
+      {
+        "run": 2,
+        "status": "completed",
+        "statusMessage": "done",
+        "effects": 1,
+        "workerPidRecorded": true
+      }
+    ]
+  },
+  {
+    "name": "B5-recover-idempotent",
+    "mode": "recover",
+    "rows": [
+      {
+        "run": 1,
+        "status": "completed",
+        "statusMessage": "done",
+        "effects": 1,
+        "workerPidRecorded": true
+      },
+      {
+        "run": 2,
+        "status": "completed",
+        "statusMessage": "done",
+        "effects": 1,
+        "workerPidRecorded": true
+      }
+    ]
+  }
+]

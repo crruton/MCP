@@ -1,0 +1,154 @@
+{
+  "sdk": "ModelContextProtocol 2.4.0 + ModelContextProtocol.Extensions.Tasks 2.4.0",
+  "dotnet": "10.0.404 (runtime 10.0.15)",
+  "transport": "stdio (client spawns Server.dll via StdioClientTransport)",
+  "tool": {
+    "name": "slow_echo",
+    "delayMs": 1500
+  },
+  "runs": 12,
+  "negotiated": [
+    "2026-07-28"
+  ],
+  "tasksCreated": 12,
+  "pollIntervalMs": [
+    1000
+  ],
+  "pollingMs": {
+    "median": 2118.0,
+    "min": 2065,
+    "max": 2135
+  },
+  "plainCallMs": {
+    "median": 1525.5,
+    "min": 1521,
+    "max": 1571
+  },
+  "plainCallText": "echo: hello from csharp",
+  "extensions": [
+    "io.modelcontextprotocol/tasks"
+  ],
+  "rows": [
+    {
+      "negotiated": "2026-07-28",
+      "isTask": true,
+      "taskId": "758c759c0a964e949c46d77f03101268",
+      "status": "Working",
+      "pollIntervalMs": 1000,
+      "pollingMs": 2097,
+      "plainMs": 1521,
+      "plainText": "echo: hello from csharp"
+    },
+    {
+      "negotiated": "2026-07-28",
+      "isTask": true,
+      "taskId": "dd8bd37004164a7ea15c349d3521e7d7",
+      "status": "Working",
+      "pollIntervalMs": 1000,
+      "pollingMs": 2123,
+      "plainMs": 1524,
+      "plainText": "echo: hello from csharp"
+    },
+    {
+      "negotiated": "2026-07-28",
+      "isTask": true,
+      "taskId": "fd973954989c4727afcb7209b7aef0da",
+      "status": "Working",
+      "pollIntervalMs": 1000,
+      "pollingMs": 2080,
+      "plainMs": 1522,
+      "plainText": "echo: hello from csharp"
+    },
+    {
+      "negotiated": "2026-07-28",
+      "isTask": true,
+      "taskId": "084e3a1e8725482ba648f3161ee977f5",
+      "status": "Working",
+      "pollIntervalMs": 1000,
+      "pollingMs": 2135,
+      "plainMs": 1521,
+      "plainText": "echo: hello from csharp"
+    },
+    {
+      "negotiated": "2026-07-28",
+      "isTask": true,
+      "taskId": "6410861ce19743479fa293bd0f5707c4",
+      "status": "Working",
+      "pollIntervalMs": 1000,
+      "pollingMs": 2065,
+      "plainMs": 1527,
+      "plainText": "echo: hello from csharp"
+    },
+    {
+      "negotiated": "2026-07-28",
+      "isTask": true,
+      "taskId": "8bbfbc7813ca405095a280a2fded04e8",
+      "status": "Working",
+      "pollIntervalMs": 1000,
+      "pollingMs": 2119,
+      "plainMs": 1522,
+      "plainText": "echo: hello from csharp"
+    },
+    {
+      "negotiated": "2026-07-28",
+      "isTask": true,
+      "taskId": "bc470eeef1e248d99ed59b50de3b625a",
+      "status": "Working",
+      "pollIntervalMs": 1000,
+      "pollingMs": 2097,
+      "plainMs": 1524,
+      "plainText": "echo: hello from csharp"
+    },
+    {
+      "negotiated": "2026-07-28",
+      "isTask": true,
+      "taskId": "cfaaeafb769f4bdc8037a2b7d4bc62f8",
+      "status": "Working",
+      "pollIntervalMs": 1000,
+      "pollingMs": 2128,
+      "plainMs": 1528,
+      "plainText": "echo: hello from csharp"
+    },
+    {
+      "negotiated": "2026-07-28",
+      "isTask": true,
+      "taskId": "2f19160ade6a4e1ab50093ba3200f540",
+      "status": "Working",
+      "pollIntervalMs": 1000,
+      "pollingMs": 2120,
+      "plainMs": 1532,
+      "plainText": "echo: hello from csharp"
+    },
+    {
+      "negotiated": "2026-07-28",
+      "isTask": true,
+      "taskId": "374273fee10748d5be2dea71330620d2",
+      "status": "Working",
+      "pollIntervalMs": 1000,
+      "pollingMs": 2130,
+      "plainMs": 1540,
+      "plainText": "echo: hello from csharp"
+    },
+    {
+      "negotiated": "2026-07-28",
+      "isTask": true,
+      "taskId": "452d973749594699b9548abd7a69e83a",
+      "status": "Working",
+      "pollIntervalMs": 1000,
+      "pollingMs": 2117,
+      "plainMs": 1539,
+      "plainText": "echo: hello from csharp"
+    },
+    {
+      "negotiated": "2026-07-28",
+      "isTask": true,
+      "taskId": "6c463d6553c447b28b6dd484af703394",
+      "status": "Working",
+      "pollIntervalMs": 1000,
+      "pollingMs": 2107,
+      "plainMs": 1571,
+      "plainText": "echo: hello from csharp"
+    }
+  ],
+  "anomaly": "в одном отдельном запуске (не в этих 12) задача не создалась и вызов ушёл синхронно; вероятная причина — discovery-проба не уложилась в таймаут на холодном старте, клиент откатился на 2025-11-25"
+}

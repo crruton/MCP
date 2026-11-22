@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Если используете эти замеры или код, ссылайтесь на репозиторий."
+title: "MCP Tasks, ноябрь 2026: спецификация, SDK и замеры"
+abstract: >-
+  Воспроизводимые эксперименты к статье о MCP Tasks (ревизия протокола 2026-07-28):
+  13 HTTP-зондов ядра, 45 замеров поллинга, 6 сценариев падения процесса и живые
+  прогоны клиентов и серверов на TypeScript, Go, C#, Rust и Java.
+authors:
+  - name: "MCP Tasks Lab contributors"
+version: "1.0.0"
+date-released: "2026-11-22"
+license: MIT
+keywords:
+  - MCP
+  - Model Context Protocol
+  - MCP Tasks
+  - SEP-2663
+  - LLM agents
+  - protocol

@@ -1,0 +1,40 @@
+{
+  "measuredAt": "2026-11-20..2026-11-22",
+  "os": "Windows 11",
+  "node": {
+    "runtime": "24.20.0",
+    "packages": {
+      "@modelcontextprotocol/server": "2.4.0",
+      "@modelcontextprotocol/node": "2.1.2",
+      "zod": "4.6.7"
+    }
+  },
+  "go": {
+    "toolchain": "1.27.4",
+    "sdk": "github.com/modelcontextprotocol/go-sdk 1.8.0"
+  },
+  "dotnet": {
+    "sdk": "10.0.404",
+    "runtime": "10.0.15",
+    "packages": {
+      "ModelContextProtocol": "2.4.0",
+      "ModelContextProtocol.Extensions.Tasks": "2.4.0"
+    }
+  },
+  "rust": {
+    "toolchain": "1.100.0",
+    "target": "x86_64-pc-windows-gnu",
+    "linker": "winlibs GCC 16.2.0",
+    "sdk": "rmcp 3.11.0 (tag rmcp-v3.11.0)"
+  },
+  "java": {
+    "jdk": "Temurin 21.0.13.1+2 (LTS)",
+    "maven": "3.10.2",
+    "sdk": "io.modelcontextprotocol.sdk:mcp 2.2.0"
+  },
+  "protocol": {
+    "modern": "2026-07-28",
+    "legacy": "2025-11-25",
+    "tasksExtension": "io.modelcontextprotocol/tasks"
+  }
+}

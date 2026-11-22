@@ -1,0 +1,42 @@
+{
+  "sdk": "rmcp 3.11.0 (tag rmcp-v3.11.0)",
+  "rust": "rustc 1.100.0 (0ef1bc386 2026-11-09), cargo 1.100.0",
+  "target": "x86_64-pc-windows-gnu",
+  "transport": "stdio (clients_task_stdio spawns servers_task_stdio via cargo run)",
+  "examples": {
+    "server": "examples/servers/src/task_stdio.rs",
+    "client": "examples/clients/src/clients_task_stdio.rs"
+  },
+  "negotiatedProtocolVersion": "2025-11-25",
+  "extensions": [
+    "io.modelcontextprotocol/tasks"
+  ],
+  "serverInstructions": "Task demo server (SEP-2663). `slow_sum` runs as a task for clients that declare the tasks extension.",
+  "tools": [
+    "quick_echo",
+    "slow_sum"
+  ],
+  "toolCalls": {
+    "quick_echo": {
+      "isTask": false,
+      "isError": false,
+      "text": "hi from rmcp"
+    },
+    "slow_sum": {
+      "isTask": true,
+      "taskId": "1d5c3f84-d5eb-4dc1-9770-e56abb0902c7",
+      "statuses": [
+        "Working",
+        "Working",
+        "Completed"
+      ],
+      "observedPollCadenceMs": 1000,
+      "resultText": "42",
+      "resultType": "complete"
+    }
+  },
+  "tasksSupported": true,
+  "note": "rmcp 3.11.0 реализует расширение целиком: клиент объявляет io.modelcontextprotocol/tasks, сервер отдаёт CreateTaskResult, клиент поллит tasks/get и получает Completed с результатом. Согласована версия 2025-11-25 — примеры rmcp не перешли на 2026-07-28, расширение работает поверх 2025-11-25.",
+  "caveat": "Первая сборка зависимостей заняла ~46 минут (362 крейта, GNU-таргет, MinGW-линкер). Лог — run.log.",
+  "runLog": "run.log"
+}

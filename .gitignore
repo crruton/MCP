@@ -1,0 +1,26 @@
+# Node
+node_modules/
+
+# .NET
+experiments/expD_csharp/**/bin/
+experiments/expD_csharp/**/obj/
+
+# Java
+experiments/expF_java/target/
+experiments/expF_java/cp.txt
+experiments/expF_java/build.log
+
+# Rust
+target/
+
+# Логи, собранные run-all.ps1 (логи отдельных экспериментов в репозитории остаются)
+experiments/logs/
+
+# Logs and scratch
+*.tmp
+.tmp_*
+
+# expB: генерируемое хранилище и черновые логи отдельных прогонов
+experiments/expB_crash/store-data/
+experiments/expB_crash/b*.log
+experiments/expB_crash/run2.log

@@ -1,0 +1,23 @@
+{
+  "sdk": "github.com/modelcontextprotocol/go-sdk v1.8.0",
+  "go": "go1.27.4 windows/amd64",
+  "transport": "stdio (client spawns the same binary in -server mode)",
+  "negotiatedProtocolVersion": "2026-07-28",
+  "serverCapabilities": {
+    "logging": {},
+    "tools": {
+      "listChanged": true
+    }
+  },
+  "extensions": [],
+  "tools": [
+    "echo"
+  ],
+  "toolCall": {
+    "ok": true,
+    "isError": false,
+    "echo": "hello from go"
+  },
+  "tasksSupported": false,
+  "note": "no io.modelcontextprotocol/tasks in mcp package sources; grep over module found no CreateTaskResult/TaskManager"
+}

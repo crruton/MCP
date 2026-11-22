@@ -1,0 +1,322 @@
+== Experiment B: kill -9 and restart ==
+    [srv] expB server mode=memory port=3120 idempotent=true
+  [timing] server up +1057ms
+  [timing] server killed +4470ms (port closed after 134ms)
+    [srv] expB server mode=memory port=3120 idempotent=true
+  [timing] server restarted +5164ms
+  [timing] status=unknown after 19 polls / 10180ms
+    [srv] expB server mode=memory port=3120 idempotent=true
+  [timing] server up +657ms
+  [timing] server killed +3901ms (port closed after 163ms)
+    [srv] expB server mode=memory port=3120 idempotent=true
+  [timing] server restarted +4456ms
+  [timing] status=unknown after 19 polls / 10104ms
+    [srv] expB server mode=memory port=3120 idempotent=true
+  [timing] server up +559ms
+  [timing] server killed +3762ms (port closed after 120ms)
+    [srv] expB server mode=memory port=3120 idempotent=true
+  [timing] server restarted +4328ms
+  [timing] status=unknown after 19 polls / 10072ms
+  B1-memory: unknown/eff=0, unknown/eff=0, unknown/eff=0
+    [srv] expB server mode=file port=3120 idempotent=true
+  [timing] server up +551ms
+  [timing] server killed +3757ms (port closed after 131ms)
+    [srv] expB server mode=file port=3120 idempotent=true
+  [timing] server restarted +4320ms
+  [timing] status=working after 19 polls / 10074ms
+    [srv] expB server mode=file port=3120 idempotent=true
+  [timing] server up +555ms
+  [timing] server killed +3777ms (port closed after 130ms)
+    [srv] expB server mode=file port=3120 idempotent=true
+  [timing] server restarted +4323ms
+  [timing] status=working after 19 polls / 10106ms
+    [srv] expB server mode=file port=3120 idempotent=true
+  [timing] server up +556ms
+  [timing] server killed +3785ms (port closed after 132ms)
+    [srv] expB server mode=file port=3120 idempotent=true
+  [timing] server restarted +4343ms
+  [timing] status=working after 19 polls / 10087ms
+  B2-file: working/eff=1, working/eff=1, working/eff=1
+    [srv] expB server mode=file-heartbeat port=3120 idempotent=true
+  [timing] server up +560ms
+  [timing] server killed +3775ms (port closed after 128ms)
+    [srv] expB server mode=file-heartbeat port=3120 idempotent=true
+  [timing] server restarted +4443ms
+  [timing] status=failed after 2 polls / 603ms
+    [srv] expB server mode=file-heartbeat port=3120 idempotent=true
+  [timing] server up +564ms
+  [timing] server killed +3803ms (port closed after 146ms)
+    [srv] expB server mode=file-heartbeat port=3120 idempotent=true
+  [timing] server restarted +4358ms
+  [timing] status=failed after 2 polls / 590ms
+    [srv] expB server mode=file-heartbeat port=3120 idempotent=true
+  [timing] server up +571ms
+  [timing] server killed +3778ms (port closed after 123ms)
+    [srv] expB server mode=file-heartbeat port=3120 idempotent=true
+  [timing] server restarted +4440ms
+  [timing] status=failed after 2 polls / 590ms
+  B3-file-heartbeat: failed/eff=1, failed/eff=1, failed/eff=1
+    [srv] expB server mode=external port=3120 idempotent=true
+  [timing] server up +562ms
+    [srv] SPAWNED tsk_61da7a66cbfa451f9cc86614c2730a67 pid 18140
+  [timing] server killed +3807ms (port closed after 133ms)
+    [srv] expB server mode=external port=3120 idempotent=true
+  [timing] server restarted +4589ms
+  [timing] status=completed after 51 polls / 26530ms
+    [srv] expB server mode=external port=3120 idempotent=true
+  [timing] server up +561ms
+    [srv] SPAWNED tsk_73f3b64ed4a24e93ba2214df95c0fcdb pid 14508
+  [timing] server killed +3812ms (port closed after 141ms)
+    [srv] expB server mode=external port=3120 idempotent=true
+  [timing] server restarted +4490ms
+  [timing] status=completed after 51 polls / 26594ms
+  B4-external-worker: completed/eff=1, completed/eff=1
+    [srv] expB server mode=recover port=3120 idempotent=true
+  [timing] server up +666ms
+    [srv] SPAWNED tsk_a39eb5c2254f4c15834998da710ad385 pid 7016
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+  [timing] server killed +5959ms (port closed after 146ms)
+  [timing] worker killed +6091ms
+    [srv] expB server mode=recover port=3120 idempotent=true
+  [timing] server restarted +6646ms
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 1 stale
+    [srv] ORPHAN tsk_a39eb5c2254f4c15834998da710ad385 stale for 1111 ms
+    [srv] REDISPATCHED tsk_a39eb5c2254f4c15834998da710ad385 pid 18428
+    [srv] BOOT_SCAN_DONE
+  [timing] status=completed after 59 polls / 30764ms
+    [srv] expB server mode=recover port=3120 idempotent=true
+  [timing] server up +555ms
+    [srv] SPAWNED tsk_aa070b8de266427d8922fb8232f1e6a2 pid 11244
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+  [timing] server killed +5821ms (port closed after 143ms)
+  [timing] worker killed +5960ms
+    [srv] expB server mode=recover port=3120 idempotent=true
+  [timing] server restarted +6622ms
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 1 stale
+    [srv] ORPHAN tsk_aa070b8de266427d8922fb8232f1e6a2 stale for 1015 ms
+    [srv] REDISPATCHED tsk_aa070b8de266427d8922fb8232f1e6a2 pid 6836
+    [srv] BOOT_SCAN_DONE
+  [timing] status=completed after 59 polls / 30856ms
+  B5-recover-idempotent: completed/eff=1, completed/eff=1
+    [srv] expB server mode=recover port=3120 idempotent=false
+  [timing] server up +548ms
+    [srv] SPAWNED tsk_865c208a73074690a78964096a55faef pid 1276
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+BOOT_SCAN 1 working, 0 stale
+  [timing] server killed +5826ms (port closed after 164ms)
+  [timing] worker killed +5967ms
+    [srv] expB server mode=recover port=3120 idempotent=false
+  [timing] server restarted +6535ms
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 1 stale
+    [srv] ORPHAN tsk_865c208a73074690a78964096a55faef stale for 1093 ms
+    [srv] REDISPATCHED tsk_865c208a73074690a78964096a55faef pid 784
+    [srv] BOOT_SCAN_DONE
+  [timing] status=completed after 59 polls / 30885ms
+    [srv] expB server mode=recover port=3120 idempotent=false
+  [timing] server up +556ms
+    [srv] SPAWNED tsk_37a52efc053e4120afb8556ee54e6686 pid 3528
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+BOOT_SCAN 1 working, 0 stale
+  [timing] server killed +5823ms (port closed after 147ms)
+  [timing] worker killed +5965ms
+    [srv] expB server mode=recover port=3120 idempotent=false
+  [timing] server restarted +6517ms
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 0 stale
+    [srv] BOOT_SCAN 1 working, 1 stale
+    [srv] ORPHAN tsk_37a52efc053e4120afb8556ee54e6686 stale for 1017 ms
+    [srv] REDISPATCHED tsk_37a52efc053e4120afb8556ee54e6686 pid 11988
+    [srv] BOOT_SCAN_DONE
+  [timing] status=completed after 59 polls / 30898ms
+  B6-recover-no-idempotency: completed/eff=2, completed/eff=2
+
+wrote results-all.json

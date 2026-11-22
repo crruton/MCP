@@ -1,0 +1,84 @@
+﻿run=1 server: Server 1.0.0.0
+run=1 negotiated: 2026-07-28
+run=1 capabilities.extensions: io.modelcontextprotocol/tasks
+run=1 callToolAsTask: isTask=True taskId=758c759c0a964e949c46d77f03101268 status=Working pollIntervalMs=1000
+run=1 callToolWithPolling: elapsedMs=2097 isError=
+run=1   text=echo: hello from csharp
+run=1 plain call (no opt-in): elapsedMs=1521 text=echo: hello from csharp
+run=2 server: Server 1.0.0.0
+run=2 negotiated: 2026-07-28
+run=2 capabilities.extensions: io.modelcontextprotocol/tasks
+run=2 callToolAsTask: isTask=True taskId=dd8bd37004164a7ea15c349d3521e7d7 status=Working pollIntervalMs=1000
+run=2 callToolWithPolling: elapsedMs=2123 isError=
+run=2   text=echo: hello from csharp
+run=2 plain call (no opt-in): elapsedMs=1524 text=echo: hello from csharp
+run=3 server: Server 1.0.0.0
+run=3 negotiated: 2026-07-28
+run=3 capabilities.extensions: io.modelcontextprotocol/tasks
+run=3 callToolAsTask: isTask=True taskId=fd973954989c4727afcb7209b7aef0da status=Working pollIntervalMs=1000
+run=3 callToolWithPolling: elapsedMs=2080 isError=
+run=3   text=echo: hello from csharp
+run=3 plain call (no opt-in): elapsedMs=1522 text=echo: hello from csharp
+run=4 server: Server 1.0.0.0
+run=4 negotiated: 2026-07-28
+run=4 capabilities.extensions: io.modelcontextprotocol/tasks
+run=4 callToolAsTask: isTask=True taskId=084e3a1e8725482ba648f3161ee977f5 status=Working pollIntervalMs=1000
+run=4 callToolWithPolling: elapsedMs=2135 isError=
+run=4   text=echo: hello from csharp
+run=4 plain call (no opt-in): elapsedMs=1521 text=echo: hello from csharp
+run=5 server: Server 1.0.0.0
+run=5 negotiated: 2026-07-28
+run=5 capabilities.extensions: io.modelcontextprotocol/tasks
+run=5 callToolAsTask: isTask=True taskId=6410861ce19743479fa293bd0f5707c4 status=Working pollIntervalMs=1000
+run=5 callToolWithPolling: elapsedMs=2065 isError=
+run=5   text=echo: hello from csharp
+run=5 plain call (no opt-in): elapsedMs=1527 text=echo: hello from csharp
+run=6 server: Server 1.0.0.0
+run=6 negotiated: 2026-07-28
+run=6 capabilities.extensions: io.modelcontextprotocol/tasks
+run=6 callToolAsTask: isTask=True taskId=8bbfbc7813ca405095a280a2fded04e8 status=Working pollIntervalMs=1000
+run=6 callToolWithPolling: elapsedMs=2119 isError=
+run=6   text=echo: hello from csharp
+run=6 plain call (no opt-in): elapsedMs=1522 text=echo: hello from csharp
+run=7 server: Server 1.0.0.0
+run=7 negotiated: 2026-07-28
+run=7 capabilities.extensions: io.modelcontextprotocol/tasks
+run=7 callToolAsTask: isTask=True taskId=bc470eeef1e248d99ed59b50de3b625a status=Working pollIntervalMs=1000
+run=7 callToolWithPolling: elapsedMs=2097 isError=
+run=7   text=echo: hello from csharp
+run=7 plain call (no opt-in): elapsedMs=1524 text=echo: hello from csharp
+run=8 server: Server 1.0.0.0
+run=8 negotiated: 2026-07-28
+run=8 capabilities.extensions: io.modelcontextprotocol/tasks
+run=8 callToolAsTask: isTask=True taskId=cfaaeafb769f4bdc8037a2b7d4bc62f8 status=Working pollIntervalMs=1000
+run=8 callToolWithPolling: elapsedMs=2128 isError=
+run=8   text=echo: hello from csharp
+run=8 plain call (no opt-in): elapsedMs=1528 text=echo: hello from csharp
+run=9 server: Server 1.0.0.0
+run=9 negotiated: 2026-07-28
+run=9 capabilities.extensions: io.modelcontextprotocol/tasks
+run=9 callToolAsTask: isTask=True taskId=2f19160ade6a4e1ab50093ba3200f540 status=Working pollIntervalMs=1000
+run=9 callToolWithPolling: elapsedMs=2120 isError=
+run=9   text=echo: hello from csharp
+run=9 plain call (no opt-in): elapsedMs=1532 text=echo: hello from csharp
+run=10 server: Server 1.0.0.0
+run=10 negotiated: 2026-07-28
+run=10 capabilities.extensions: io.modelcontextprotocol/tasks
+run=10 callToolAsTask: isTask=True taskId=374273fee10748d5be2dea71330620d2 status=Working pollIntervalMs=1000
+run=10 callToolWithPolling: elapsedMs=2130 isError=
+run=10   text=echo: hello from csharp
+run=10 plain call (no opt-in): elapsedMs=1540 text=echo: hello from csharp
+run=11 server: Server 1.0.0.0
+run=11 negotiated: 2026-07-28
+run=11 capabilities.extensions: io.modelcontextprotocol/tasks
+run=11 callToolAsTask: isTask=True taskId=452d973749594699b9548abd7a69e83a status=Working pollIntervalMs=1000
+run=11 callToolWithPolling: elapsedMs=2117 isError=
+run=11   text=echo: hello from csharp
+run=11 plain call (no opt-in): elapsedMs=1539 text=echo: hello from csharp
+run=12 server: Server 1.0.0.0
+run=12 negotiated: 2026-07-28
+run=12 capabilities.extensions: io.modelcontextprotocol/tasks
+run=12 callToolAsTask: isTask=True taskId=6c463d6553c447b28b6dd484af703394 status=Working pollIntervalMs=1000
+run=12 callToolWithPolling: elapsedMs=2107 isError=
+run=12   text=echo: hello from csharp
+run=12 plain call (no opt-in): elapsedMs=1571 text=echo: hello from csharp

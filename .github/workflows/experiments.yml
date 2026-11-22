@@ -1,0 +1,99 @@
+name: experiments
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  node-experiments:
+    # Эксперимент B убивает процессы через taskkill /F, поэтому только Windows.
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: experiments/package-lock.json
+
+      - name: Install
+        working-directory: experiments
+        run: npm ci
+
+      - name: exp0 — 13 HTTP-зондов
+        working-directory: experiments
+        run: node exp0_probe/probe.mjs
+
+      - name: expA — 45 прогонов поллинга
+        working-directory: experiments
+        run: node expA_polling/run.mjs
+
+      - name: expB — 6 сценариев падения
+        working-directory: experiments
+        run: node expB_crash/run.mjs
+
+      - name: Проверить, что все results.json валидны
+        shell: pwsh
+        run: |
+          $files = Get-ChildItem -Recurse -Filter 'results*.json' -Path experiments
+          foreach ($f in $files) {
+            try { Get-Content $f.FullName -Raw | ConvertFrom-Json | Out-Null }
+            catch { throw "Невалидный JSON: $($f.FullName)" }
+          }
+          Write-Host "OK: $($files.Count) файлов"
+
+      - name: Сохранить результаты прогона
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: results
+          path: |
+            experiments/**/results*.json
+            experiments/**/*.log
+          retention-days: 14
+
+  go-experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.27'
+          cache-dependency-path: experiments/expC_go/go.sum
+      - name: expC — клиент и сервер по stdio
+        working-directory: experiments/expC_go
+        run: go run .
+
+  java-experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: expF — клиент и сервер по stdio
+        working-directory: experiments/expF_java
+        run: |
+          mvn -B -q compile
+          mvn -B -q dependency:build-classpath -Dmdep.outputFile=cp.txt
+          java -cp "target/classes:$(cat cp.txt)" expf.Client
+
+  dotnet-experiment:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: expD — сервер с Tasks и клиент с поллингом
+        working-directory: experiments/expD_csharp
+        run: pwsh -File run.ps1
